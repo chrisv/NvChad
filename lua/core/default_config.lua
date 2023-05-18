@@ -11,9 +11,9 @@ M.ui = {
   hl_override = {},
   changed_themes = {},
   theme_toggle = { "onedark", "one_light" },
-  theme = "onedark", -- default theme
+  theme = "gruvchad", -- default theme
   transparency = false,
-  lsp_semantic_tokens = false, -- needs nvim v0.9, just adds highlight groups for lsp semantic tokens
+  lsp_semantic_tokens = true, -- needs nvim v0.9, just adds highlight groups for lsp semantic tokens
 
   -- https://github.com/NvChad/base46/tree/v2.0/lua/base46/extended_integrations
   extended_integrations = {}, -- these aren't compiled by default, ex: "alpha", "notify"
@@ -27,11 +27,11 @@ M.ui = {
     selected_item_bg = "colored", -- colored / simple
   },
 
-  telescope = { style = "borderless" }, -- borderless / bordered
+  telescope = { style = "bordered" }, -- borderless / bordered
 
   ------------------------------- nvchad_ui modules -----------------------------
   statusline = {
-    theme = "default", -- default/vscode/vscode_colored/minimal
+    theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
     -- round and block will work for minimal theme only
     separator_style = "default",
@@ -40,7 +40,7 @@ M.ui = {
 
   -- lazyload it when there are 1+ buffers
   tabufline = {
-    show_numbers = false,
+    show_numbers = true,
     enabled = true,
     lazyload = true,
     overriden_modules = nil,
@@ -48,18 +48,14 @@ M.ui = {
 
   -- nvdash (dashboard)
   nvdash = {
-    load_on_startup = false,
+    load_on_startup = true,
 
     header = {
-      "           ▄ ▄                   ",
-      "       ▄   ▄▄▄     ▄ ▄▄▄ ▄ ▄     ",
-      "       █ ▄ █▄█ ▄▄▄ █ █▄█ █ █     ",
-      "    ▄▄ █▄█▄▄▄█ █▄█▄█▄▄█▄▄█ █     ",
-      "  ▄ █▄▄█ ▄ ▄▄ ▄█ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄  ",
-      "  █▄▄▄▄ ▄▄▄ █ ▄ ▄▄▄ ▄ ▄▄▄ ▄ ▄ █ ▄",
-      "▄ █ █▄█ █▄█ █ █ █▄█ █ █▄█ ▄▄▄ █ █",
-      "█▄█ ▄ █▄▄█▄▄█ █ ▄▄█ █ ▄ █ █▄█▄█ █",
-      "    █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█ █▄█▄▄▄█    ",
+      "·▄▄▄ ▄▄▄· ▄▄▌ ▐ ▄▌▄ •▄ ▄▄▄ ..▄▄ · ",
+      "▐▄▄·▐█ ▀█ ██· █▌▐██▌▄▌▪▀▄.▀·▐█ ▀. ",
+      "██▪ ▄█▀▀█ ██▪▐█▐▐▌▐▀▀▄·▐▀▀▪▄▄▀▀▀█▄",
+      "██▌.▐█ ▪▐▌▐█▌██▐█▌▐█.█▌▐█▄▄▌▐█▄▪▐█",
+      "▀▀▀  ▀  ▀  ▀▀▀▀ ▀▪·▀  ▀ ▀▀▀  ▀▀▀▀ ",
     },
 
     buttons = {
@@ -72,7 +68,7 @@ M.ui = {
     },
   },
 
-  cheatsheet = { theme = "grid" }, -- simple/grid
+  cheatsheet = { theme = "simple" }, -- simple/grid
 
   lsp = {
     -- show function signatures i.e args as you type
