@@ -247,11 +247,7 @@ set.laststatus=2
 --- ]])
 
 --- Show those damn hidden characters
---- Verbose: set listchars=nbsp:¬,eol:¶,extends:»,precedes:«,trail:•
----set.listchars='nbsp:¬,eol:¶,extends:»,precedes:«,lead:•,trail:•,tab:<->'
----set.listchars='nbsp:¬,eol:↵¶,extends:»,precedes:«,lead:•,trail:•,tab:<->'
----set.listchars='nbsp:·,eol:←↓,trail:·,tab:⇤-⇥'
-set.listchars='nbsp:·,extends:»,precedes:«,lead:·,eol:↵,trail:·,tab:|·'
+set.listchars='nbsp:·,extends:»,precedes:«,lead:·,eol:⌟,trail:·,tab:|·'
 
 vim.cmd([[
 "set listchars=nbsp:¬,eol:¶,extends:»,precedes:«,trail:•
