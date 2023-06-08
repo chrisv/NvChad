@@ -260,6 +260,11 @@ set invlist
 --- --- ,c will copy entire buffer into clipboard
 vim.keymap.set('n', '<leader>xp', ':read !xsel --clipboard --output<CR>')
 vim.keymap.set('n', '<leader>xy',':w !xsel -ib<CR><CR>')
+
+vim.cmd([[
+au BufNewFile,BufRead *.{yaml,yml} if getline(1) =~ '^apiVersion:' || getline(2) =~ '^apiVersion:' | setlocal filetype=helm | endif
+]])
+
 --
 --
 --

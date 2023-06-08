@@ -13,6 +13,9 @@ local plugins = {
   {
     "towolf/vim-helm"
   },
+  {
+    "someone-stole-my-name/yaml-companion.nvim",
+  },
 }
 return plugins
 

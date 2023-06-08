@@ -273,6 +273,23 @@ local default_plugins = {
   --     -- vim.fn["firenvim#install"](0)
   --   end
   -- },
+    {
+      "someone-stole-my-name/yaml-companion.nvim",
+      dependencies = {
+      { "neovim/nvim-lspconfig",
+        "nvim-lua/plenary.nvim",
+        "nvim-telescope/telescope.nvim",
+      },
+    },
+    opts = function()
+      return require "plugins.configs.yaml-companion"
+    end,
+    config = function(_, opts)
+      require("yaml-companion").setup(opts)
+      --require("lspconfig")["yamlls"].setup(opts.lspconfig)
+      require("lspconfig")["yaml-language-server"].setup(opts.lspconfig)
+    end,
+    },
 }
 
 local config = require("core.utils").load_config()
